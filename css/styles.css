@@ -3,15 +3,80 @@
 /* note that we do not need to import reset.css here because Bootstrap already resets
 the browser default styles before applying their own */
 
-.col-pic{
-	float:left;
-	width: 100px;
-	margin-right: 1em;
-	margin-left: 1em;
+
+
+body{
+ 	background-image: url(../img/1200px/seamlesstexture20_1200.jpg);
+    /*background-repeat: repeat;*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 18px;
+/*    padding: 17px;
+*//*    background-size: 700px 700px, 1400px 3000px;
+*/    background-position:left top;
+    background-repeat: repeat;
+}
+.navbar{
+	/*background-image: url(../img/1200px/seamlesstexture20_1200.jpg);*/
+	background-color: #EEE;
+	position: fixed;
+	width: 84.6%;
+}
+
+.crop {
+    width: 250px;
+    height: 80px;
+    /*overflow: hidden;*/
+    border-radius: 75px;
+    /*box-shadow:  2px 2px 6px #555;*/
 }
 
 @media screen and (max-width: 767px) {
    .carousel{
    	display:none;
    }
+   .navbar{
+   	position: relative;
+   }
 }
+
+.pull-left {
+    float: left;
+    margin-right: 20px;
+}
+
+.footer{
+	position: center;
+	text-align: center;
+	background-color: #EEE;
+}
+
+
+.template {
+    display: none;
+}
+
+.menu-ui {
+    margin-bottom: 1em;
+}
+
+.menu_list {
+    clear: both;
+    background-color: #EEE;
+    border: 1px dotted #DDD;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.menu_list .name {
+    margin-top: 0;
+}
+
+.menu_list .description {
+    margin-bottom: 0;
+}
+
+.menu .prices {
+    padding-left: 120px;
+}
+

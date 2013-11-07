@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="description" content="Dawgs Pizza Home Page">
+	    <meta name="author" content="iphong">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	    <link rel="shortcut icon" href="img/logo.png">
+	    <title>Dawgs Pizza</title>
+	    
+	    <!-- hot link to Bootstrap stylesheet -->
+	    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+	    <!-- our own stylesheet for overrides -->
+	    <link rel="stylesheet" href="css/styles.css">
+	</head>	
+	<body> 	
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".pawnee-navbar-menu">
+			            <span class="sr-only">Toggle Navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>                        
+			        </button>
+			        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="pizza logo" class="crop"></a>
+
+			    </div>
+
+			    <div class="collapse navbar-collapse pawnee-navbar-menu">
+			        <ul class="nav navbar-nav">
+			            <li class="active"><a href="index.html">HOME</a></li>
+			            <li><a href="menu.html">MENU</a></li>
+			            <li><a href="about.html">ABOUT US</a></li>
+			        </ul>
+			    </div>
+			</nav>
+
+			<br><br><br><br><br><br>
+			<p><h3> All our pizzas are made with hand-thrown thin crust, baked in real wood ovens. Choose from one of these sizes: </h3></p> 
+	        <p> Small (12") Medium (14") Large (17")</p>
+
+			<p><strong>All pizzas can be customized--add a few ingredients, or take a few off--for an extra $2.</strong></p>
+
+			<br>
+			<div class="menu-ui">
+               	<span class="menu-label">Our Menu</span>
+            	<div class="btn-group">
+	                <button type="button" class="btn btn-default active" data-clickby="meat">Meat Pies</button>
+                 	<button type="button" class="btn btn-default" data-clickby="vegetarian">Vegetarian Pies</button> 
+                 	<button type="button" class="btn btn-default" data-clickby="drinks">Drinks</button>
+	                <button type="button" class="btn btn-default" data-clickby="desserts">Desserts</button>
+
+                </div>
+            </div>
+
+
+			<div class="menu-book"></div>
+            <!-- template card for each entry
+             this will not be displayed, only used by code -->
+            <div class="template menu_list">
+                <div class="details">
+                    <h2 class="name"></h2>
+                    <p class="description"></p>
+                    <p class ="prices"></p>
+                </div>
+            </div>
+
+		<div class ="footer"> 
+			<br>
+			Call us for delivery: 206-555-1212
+			<a href="mailto:dawgpizzaseattle@gmail.com" target="_top">   &nbsp;email us</a> 
+			to place order today.
+
+			<br>
+			&copy;	2013 Dawg Pizza&nbsp;
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="DawgPizzaSea" data-size="large">&nbsp;Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],
+			p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/hw3.js"></script>
+         <!-- auto-play the carousel -->
+	    
+	</body>
+</html>
