@@ -12,7 +12,7 @@ body{
     font-size: 18px;
 /*    padding: 17px;
 *//*    background-size: 700px 700px, 1400px 3000px;
-*/    background-position:left top;
+*/   background-position:left top;
     background-repeat: repeat;
 }
 .navbar{
@@ -20,6 +20,13 @@ body{
 	background-color: #EEE;
 	position: fixed;
 	width: 84.6%;
+}
+
+.cartItem{
+  right:0px;
+  position: fixed;
+  top:160px;
+  left :950px;
 }
 
 .crop {
@@ -37,11 +44,44 @@ body{
    .navbar{
    	position: relative;
    }
+    .cartItem{
+  position: static;
+  }
+}
+
+/*@media screen and (min-height: 1609px) {
+  .cartItem{
+  position: static;
+  }
+}*/
+
+@media screen and (max-width: 1111px) {
+    .cartItem{
+  right: 20px;
+  }
+}
+
+
+@media screen and (max-width: 1265px) {
+    .cartItem{
+  left: 750px;
+  }
+}
+
+@media screen and (max-width: 949px) {
+    .cartItem{
+  left: 500px;
+  }
 }
 
 .pull-left {
     float: left;
     margin-right: 20px;
+}
+
+.pull-right {
+    float: right;
+     margin-right: 10px
 }
 
 .footer{
@@ -57,6 +97,7 @@ body{
 
 .menu-ui {
     margin-bottom: 1em;
+    font-size: 24px;
 }
 
 .menu_list {
@@ -80,3 +121,22 @@ body{
     padding-left: 120px;
 }
 
+.menu-btn-group{
+    margin-right: 20px;
+}
+
+.item_btn{
+  
+  background-color: #EEE;
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
+  border: 1px solid #EEE;
+  padding: 1px;
+
+}
+
+.cart-container{
+ max-width: 450px;
+ right: 0px;
+
+}

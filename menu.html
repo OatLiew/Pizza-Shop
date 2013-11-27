@@ -42,30 +42,163 @@
 	        <p> Small (12") Medium (14") Large (17")</p>
 
 			<p><strong>All pizzas can be customized--add a few ingredients, or take a few off--for an extra $2.</strong></p>
-
 			<br>
-			<div class="menu-ui">
-               	<span class="menu-label">Our Menu</span>
-            	<div class="btn-group">
-	                <button type="button" class="btn btn-default" data-clickby="meat">Meat Pies</button>
-                 	<button type="button" class="btn btn-default" data-clickby="vegetarian">Vegetarian Pies</button> 
-                 	<button type="button" class="btn btn-default" data-clickby="drinks">Drinks</button>
-	                <button type="button" class="btn btn-default" data-clickby="desserts">Desserts</button>
+			  <div class="form-body">
+			  		<div class="alert"></div>
+	                <div class="form-group">
+	                    <label class="col-lg-2 control-label" for="first-name">Name</label>
+	                    <div class="col-lg-5">
+	                        <input type="text" class="form-control" name="first-name" id="first-name" placeholder="first name">
+	                    </div>
+	                    <div class="col-lg-5">
+	                        <input type="text" class="form-control" name="last-name" id="last-name" placeholder="last name">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label class="col-lg-2 control-label" for="addr-1">Address</label>
+	                    <div class="col-lg-10">
+	                        <input type="text" class="form-control" name="addr-1" id="addr-1" placeholder="street address">
+	                        <input type="text" class="form-control" name="addr-2">
+	                    </div>
+	                </div>
 
-                </div>
-            </div>
+	                <div class="form-group">
+	                    <label class="col-lg-2 control-label" for="city">City/State/Zip</label>
+	                    <div class="col-lg-10">
+	                        <div class="row">
+	                            <div class="col-lg-6">
+	                                <input type="text" class="form-control" name="city" id="city" placeholder="city">
+	                            </div>
+	                            <div class="col-lg-3">
+	                                <select class="form-control us-states" name="state" id="state">
+	                                    <option value="" selected disabled>select a state...</option>
+	                                    <!-- rest of states filled via script -->
+	                                </select>        
+	                            </div>
+	                            <div class="col-lg-3">
+	                                <input type="text" class="form-control" name="zip" id ="zip" placeholder="zip code">
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
 
+	                <div class="form-group">
+	                    <label class="col-lg-2 control-label" for="email">Email</label>
+	                    <div class="col-lg-10">
+	                        <input type="email" class="form-control" name="email" id="email" placeholder="email address">
+	                    </div>
+	                </div>
 
-			<div class="menu-book"></div>
-            <!-- template card for each entry
-             this will not be displayed, only used by code -->
-            <div class="template menu_list">
-                <div class="details">
-                    <h2 class="name"></h2>
-                    <p class="description"></p>
-                    <p class ="prices"></p>
-                </div>
-            </div>
+	                <div class="form-group">
+	                    <label class="col-lg-2 control-label" for="phone">Phone</label>
+	                    <div class="col-lg-10">
+	                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="primary phone number">
+	                    </div>
+	                </div>
+	                <br>
+	                <button type="button" class="btn btn-primary place-order pull-right">Place My Order</button> <br>
+
+	               <button type="button" class="btn btn-primary pull-right cancel">Back</button>
+
+			      </div>
+			      
+			<br>
+
+            <div class="row">
+			  	<div class="col-xs-12 col-sm-6 col-md-8 ">
+				  	<div class="menu-ui">
+		               	<span class="menu-label">Our Menu</span>
+		            	<div class="menu-btn-group">
+			                <button type="button" class="meat_btn btn btn-default" data-clickby="meat">Meat Pies</button>
+		                 	<button type="button" class="veg_btn btn btn-default" data-clickby="vegetarian">Vegetarian Pies</button>
+		                 	<button type="button" class="drink_btn btn btn-default" data-clickby="drinks">Drinks</button>
+			                <button type="button" class="d_btn btn btn-default" data-clickby="desserts">Desserts</button>
+
+		                </div>
+	            	</div>
+
+					<div class="menu-book"></div>
+		            <!-- template card for each entry
+		             this will not be displayed, only used by code -->
+		            <div class="template menu_list">
+		                <div class="details">
+		                    <h2 class="name"></h2>
+		                    <p class="description"></p>
+		                    <p class ="prices"></p>
+
+		                    <div class="size_btn btn-group">
+							  <button id="small" type="button" class="small btn btn-default" value="">Small</button>
+							  <button type="button" class="med btn btn-default">Medium</button>
+							  <button type="button" class="large btn btn-default">Large</button>
+							</div>
+
+							<button id ="cart" class="add-to-cart" type="button" data-type="as" data-name="" data-size="" data-price="">
+							  Add to Cart
+							</button>
+
+		                </div>
+		            </div>
+
+			  	</div>
+
+				<div class="col-xs-6 col-md-4">
+					<div class = "cartItem" id ="cart_item">
+	                <h2>Your Cart</h2>
+	                <div class="cart-container"></div>
+	                
+	                <div class="cart-footer">
+	                    <div class="row total-row">
+
+	                    	<div class="col-xs-8">
+	                            subtotal:
+	                        </div>
+	                        <div class="col-xs-4">
+	                            $<span class="subtotal"></span>
+	                        </div>
+	                    	<div class="col-xs-8">
+	                            9.5% tax:
+	                        </div>
+	                        <div class="col-xs-4">
+	                            $<span class="tax"></span>
+	                        </div>
+
+	                        <div class="col-xs-8">
+	                            Total:
+	                        </div>
+	                        <div class="col-xs-4">
+	                            $<span class="total-price"></span>
+	                        </div>
+	                    </div>
+	                    <div class="row">
+	                        <div class="col-xs-12 button-row">
+	                            <button type="button" class="btn btn-primary place-order_buy">Place My Order</button>
+	                        </div>
+	                    </div>                        
+	                </div>
+					</div>
+			  	</div>
+			</div>
+
+		<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+
+			       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			        <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+			      </div>
+			      <div class="modal-body">
+			      Your Pizza will arrive soon!	
+				  </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+
+			        <button type="button" class="btn btn-default" id="submit" action ="index.html">ok</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->	
 
 		<div class ="footer"> 
 			<br>
@@ -85,6 +218,12 @@
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="js/menu.js"></script>
         <script src="js/hw3.js"></script>
+        <script src="js/sign-up.js"></script>
+        <script src="js/us-states.js"></script>
+        <script src="js/render_menu.js"></script>
+        <script src="js/render_cart.js"></script>
+        <script src="js/jquery.slimscroll.min.js"></script>
+       
          <!-- auto-play the carousel -->
 	    
 	</body>
